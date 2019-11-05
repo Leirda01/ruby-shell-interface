@@ -5,7 +5,6 @@ module Parse
 
   def parse line
     exit if line.strip == "exit"
-    system line if File.path? line
     # TODO : Make it a true, robust, parser
     #        For now it naively execute commands sequentially
     return "" if line.strip == ""
