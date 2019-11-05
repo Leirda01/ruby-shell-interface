@@ -7,7 +7,12 @@ class Terminal
     raise "#{shell} doesn't exist!" unless Dir.exist? shell
 
     @shell = shell
+    @show_stderr = false
     puts mesg ? mesg : "A ruby simple #{shell} interpreter."
+  end
+
+  def show_stderr= bool
+    @show_stderr = bool
   end
 
   def prompt pprompt = ">>> "

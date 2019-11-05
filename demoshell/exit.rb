@@ -1,3 +1,0 @@
-def main
-  exit
-end

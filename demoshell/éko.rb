@@ -1,3 +1,3 @@
 def main options
-  puts options.join " "
+  puts options.join " ".to_s
 end

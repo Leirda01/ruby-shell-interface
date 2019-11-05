@@ -3,12 +3,14 @@ module Run
     Thread.new do
       begin
         load File.join @shell, "#{command}.rb"
-        main options
+        @stderr = main options
       rescue ArgumentError
-        main
+        @stderr = main
       rescue NoMethodError
       rescue LoadError
-        puts "#{@shell}: #{command}: command not found."
+        @stderr = 0; puts "#{@shell}: #{command}: command not found."
+      rescue
+        puts $!
       end
     end
   end

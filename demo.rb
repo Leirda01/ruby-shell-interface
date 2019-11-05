@@ -1,7 +1,9 @@
 require_relative "terminal/terminal"
 
-demo = Terminal.new "demoshell", %Q{Un exemple d’utilisation de mon shell."
-Bienvenue. Tu peux utiliser les commandes `éko`, `dis_bonjour`, et `exit`}
+demo = Terminal.new "demoshell"
+
+demo.show_stderr=true
+
 while demo.prompt "utilisatrice@demoshell>>> "
 end
 puts ""
