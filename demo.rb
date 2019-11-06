@@ -4,4 +4,4 @@ demo = Terminal.new "demoshell"
 
 while demo.prompt "utilisatrice@demoshell>>> "
 end
-puts ""
+puts

@@ -18,4 +18,9 @@ class Terminal
       puts; return "KeyboardInterrupt\n"
     end
   end
+
+  def lol
+    puts "mdr"
+  end
+
 end

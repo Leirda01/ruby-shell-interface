@@ -4,13 +4,15 @@ module Parse
   include Run
 
   def parse line
-    exit if line.strip == "exit"
-    # TODO : Make it a true, robust, parser
-    #        For now it naively execute commands sequentially
+    # Still not good code
+    line = line.strip
+    
+    exit if line == "exit"
     return "" if line.strip == ""
-    line.split(";").each do |cmd|
-      cmd = cmd.split
-      run( cmd.first, cmd.drop(1) ).join
+    
+    line.split( ";" ).each do |cmd|
+      cmd, *opt = cmd.split.to_a
+      run( @shell, cmd, opt ).join
       puts "=> #{@stderr}" if @stderr
     end
   end
