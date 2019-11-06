@@ -17,5 +17,10 @@
   main les_options_dans_un_tableau`. La fonction recevra les options en premier
   paramètre unique et optionnel. Si elle existe, elle sera appelée après le
   chargement du code.
-- Les appels de la fonction sont faits dans des Threads séparés, donc en
-  théorie, tout ce qu’il se passe dans un thread reste dans un thread (À TESTER)
+
+## TODO
+- J’ai besoin de bien séparer les domaines d’exécution de chacune de mes
+  commandes pour mieux gérer la mémoire.
+- Meilleure gestion des retours des commandes et de `stderr`
+- Implémenter les appels de commandes externes.
+- Mieux utiliser `gets` et plus de raccourcis (`clear`, `↑↓`, _etc_)
