@@ -9,8 +9,6 @@ module Run
       rescue NoMethodError
       rescue LoadError
         @stderr = 0; puts "#{@shell}: #{command}: command not found."
-      rescue
-        puts $!
       end
     end
   end

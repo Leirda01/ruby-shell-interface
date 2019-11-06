@@ -11,7 +11,7 @@ module Parse
     line.split(";").each do |cmd|
       cmd = cmd.split
       run( cmd.first, cmd.drop(1) ).join
-      puts "=> #{@stderr}" if @show_stderr and @stderr
+      puts "=> #{@stderr}" if @stderr
     end
   end
 end
