@@ -10,8 +10,8 @@ class Terminal
     puts mesg ? mesg : "A ruby simple #{shell} interpreter."
   end
 
-  def prompt pprompt = ">>> "
-    print pprompt
+  def prompt prompt_string = ">>> "
+    print prompt_string
     begin
       parse $_ if gets
     rescue Interrupt
