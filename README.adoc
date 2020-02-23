@@ -1,0 +1,15 @@
+= interpréteur de commande custom en ruby.
+
+== Usage de base
+
+- Pour utiliser le shell de demo, lancez la commande `$ ruby demo.rb`.
+- Appeler la commande COMMANDE provoque un `load demoshell/COMMANDE.rb`.
+- On peut exécuter deux commandes séquentiellement en les séparant d’un `;`.
+
+== TODO
+
+- `fork()` — `exec()` au lieu de `Thread()`.
+- Meilleure gestion des retours des commandes et de `stderr`
+- La possibilité de faire un `cd` pour se déplacer parmis des répertoires.
+- Implémenter les appels de commandes externes.
+- Mieux utiliser `gets` et plus de raccourcis (`clear`, `↑↓`, _etc_)
